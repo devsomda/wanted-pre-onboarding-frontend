@@ -1,0 +1,51 @@
+header {
+  margin: 15px;
+  width: 50vw;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
+  a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: cornflowerblue;
+    font-weight: 700;
+  }
+}
+
+body {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* SignUp & SignIn */
+.submit-button {
+  width: 15rem;
+  height: 2.5rem;
+  border-radius: 10px;
+}
+.sign-up-page-container {
+  // margin: 10px;
+}
+
+/* AuthInput */
+.auth-input-component-container {
+  width: 15rem;
+  margin: 3rem auto;
+  .invalid-text,
+  .valid-text {
+    font-size: small;
+    color: cadetblue;
+    margin-top: 0;
+  }
+  label {
+    p {
+      text-align: left;
+      margin-bottom: 0;
+    }
+    input {
+      width: 100%;
+      height: 2rem;
+      border-radius: 10px;
+    }
+  }
+}

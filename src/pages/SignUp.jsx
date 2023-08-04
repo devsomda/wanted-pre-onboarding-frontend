@@ -33,7 +33,7 @@ export default function SignUp() {
   };
 
   return (
-    <div>
+    <div className="sign-up-page-container">
       <h3>회원가입</h3>
       <form action="submit" onSubmit={submitHandler}>
         <AuthInput
@@ -44,7 +44,12 @@ export default function SignUp() {
           isValidPassword={isValidPassword}
           setIsValidPassword={setIsValidPassword}
         />
-        <button type="submit" data-testid="signup-button" disabled={isDisabled}>
+        <button
+          type="submit"
+          data-testid="signup-button"
+          disabled={isDisabled}
+          className="submit-button"
+        >
           회원가입
         </button>
       </form>

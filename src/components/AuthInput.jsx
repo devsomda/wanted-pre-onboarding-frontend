@@ -38,7 +38,7 @@ export default function AuthInput(props) {
   };
 
   return (
-    <div>
+    <div className="auth-input-component-container">
       <label htmlFor="emailInput">
         <p>이메일 </p>
         <input
@@ -48,7 +48,11 @@ export default function AuthInput(props) {
           onChange={emailInputHandler}
           value={inputUserInfo.email}
         />
-        {!isValidEmail && <p>이메일에는 "@"가 포함되어야 합니다.</p>}
+        {!isValidEmail ? (
+          <p className="invalid-text">이메일에는 "@"가 포함되어야 합니다.</p>
+        ) : (
+          <p className="valid-text">✅</p>
+        )}
       </label>
       <label htmlFor="passwordInput">
         <p>비밀번호</p>
@@ -59,7 +63,11 @@ export default function AuthInput(props) {
           onChange={passwordInputHandler}
           value={inputUserInfo.password}
         />
-        {!isValidPassword && <p>비밀번호는 8자 이상으로 설정해 주세요</p>}
+        {!isValidPassword ? (
+          <p className="invalid-text">비밀번호는 8자 이상으로 설정해 주세요</p>
+        ) : (
+          <p className="valid-text">✅</p>
+        )}
       </label>
     </div>
   );

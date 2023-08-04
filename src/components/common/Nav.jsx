@@ -2,9 +2,10 @@ import React from "react";
 
 export default function Nav() {
   return (
-    <div>
+    <header>
       <a href="/">메인</a>
       <a href="/signup">회원가입</a>
-    </div>
+      <a href="/signin">로그인</a>
+    </header>
   );
 }

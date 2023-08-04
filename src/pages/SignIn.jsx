@@ -36,7 +36,7 @@ export default function SignIn() {
 
   return (
     <div>
-      SignIn
+      <h3>로그인</h3>
       <form action="submit" onSubmit={submitHandler}>
         <AuthInput
           inputUserInfo={inputUserInfo}
@@ -46,7 +46,12 @@ export default function SignIn() {
           isValidPassword={isValidPassword}
           setIsValidPassword={setIsValidPassword}
         />
-        <button type="submit" data-testid="signin-button" disabled={isDisabled}>
+        <button
+          type="submit"
+          data-testid="signin-button"
+          disabled={isDisabled}
+          className="submit-button"
+        >
           로그인
         </button>
       </form>
