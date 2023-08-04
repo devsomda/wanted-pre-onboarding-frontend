@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
+import { signUp } from "../apis/requests";
 
 export default function SignUp() {
   // 유저정보: 이메일, 비밀번호 입력 값
@@ -13,6 +15,8 @@ export default function SignUp() {
   const [isValidPassword, setIsValidPassword] = useState(false);
   // 유효성 검사에 따른 버튼 disable 값 (Assignment1)
   const isDisabled = !(isValidEmail && isValidPassword);
+
+  const navigate = useNavigate();
 
   // 이메일 입력
   const emailInputHandler = (e) => {
@@ -43,15 +47,26 @@ export default function SignUp() {
   };
 
   // 회원가입
-  const signUp = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
+
     console.log("회원가입 준비 완료");
+    try {
+      const response = await signUp(
+        inputUserInfo.email,
+        inputUserInfo.password
+      );
+      alert("회원가입이 완료되었습니다!");
+      navigate("/signin");
+    } catch (error) {
+      console.error("회원가입에 실패했습니다.", error);
+    }
   };
 
   return (
     <div>
       <h3>회원가입</h3>
-      <form action="submit" onSubmit={signUp}>
+      <form action="submit" onSubmit={submitHandler}>
         <label htmlFor="emailInput">
           <p>이메일 </p>
           <input
