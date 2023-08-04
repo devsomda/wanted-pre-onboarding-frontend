@@ -13,3 +13,15 @@ export const signUp = async (email, password) => {
     throw error;
   }
 };
+
+export const signIn = async (email, password) => {
+  try {
+    const response = await axios.post(`${baseURL}/auth/signin`, {
+      email: email,
+      password: password,
+    });
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
