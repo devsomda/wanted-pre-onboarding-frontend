@@ -26,6 +26,8 @@ export default function SignIn() {
     try {
       const res = await signIn(inputUserInfo.email, inputUserInfo.password);
       console.log("로그인이 완료되었습니다!", res);
+      // token 저장
+      localStorage.setItem("token", res.access_token);
       navigate("/");
     } catch (error) {
       console.error("로그인에 실패했습니다.", error);
