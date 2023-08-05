@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 import { createTodo, getTodo } from "../apis/requests";
 import TodoItem from "../components/TodoItem";
 
@@ -17,6 +18,16 @@ export default function Todo() {
       }
     };
     fetchTodo();
+  }, []);
+
+  const navigate = useNavigate();
+
+  // Token 검증
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/signin");
+    }
   }, []);
 
   const todoInputHandler = (e) => {

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { signIn } from "../apis/requests";
 import AuthInput from "../components/AuthInput";
@@ -17,6 +17,14 @@ export default function SignIn() {
   const isDisabled = !(isValidEmail && isValidPassword);
 
   const navigate = useNavigate();
+
+  // Token 검증
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      navigate("/todo");
+    }
+  }, []);
 
   // 로그인
   const submitHandler = async (e) => {
