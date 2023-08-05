@@ -19,19 +19,19 @@ npm start
   Assignment1~3. 
    회원가입 및 로그인 유효성 검사 / 회원가입 성공 시 signin / 로그인 성공 시 todo 경로 이동
 
-  ![img1](C:\Users\twsev\OneDrive\바탕 화면\Git\wanted-pre-onboarding-frontend\assets\img1.gif)
+  ![img1](/assets/img1.gif)
 
 Assignment4. 로그인 여부에 따른 리다이렉트
 4-1. 토큰 보유자 회원가입, 로그인 접근
 
-![img2](C:\Users\twsev\OneDrive\바탕 화면\Git\wanted-pre-onboarding-frontend\assets\img2.gif)
+![img2](/assets/img2.gif)
 
 4-2. 토큰 미보유자 투두 접근
 
-![img3](C:\Users\twsev\OneDrive\바탕 화면\Git\wanted-pre-onboarding-frontend\assets\img3.gif)
+![img3]/assets/img3.gif)
 
 Assignment5 ~ 10. todo CRUD
 
-![img4](C:\Users\twsev\OneDrive\바탕 화면\Git\wanted-pre-onboarding-frontend\assets\img4.gif)
+![img4](/assets/img4.gif)
 
 
