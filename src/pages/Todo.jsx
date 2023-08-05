@@ -46,7 +46,7 @@ export default function Todo() {
   };
 
   return (
-    <div>
+    <div className="todo-list-container">
       {todoList &&
         todoList.map((data) => (
           <TodoItem
@@ -57,14 +57,17 @@ export default function Todo() {
           />
         ))}
       {/* 추가 */}
-      <input
-        data-testid="new-todo-input"
-        value={newTodo}
-        onChange={todoInputHandler}
-      />
-      <button data-testid="new-todo-add-button" onClick={addHandler}>
-        추가
-      </button>
+      <div className="add-button-wrapper">
+        <input
+          data-testid="new-todo-input"
+          value={newTodo}
+          onChange={todoInputHandler}
+          placeholder="할 일을 작성해 주세요"
+        />
+        <button data-testid="new-todo-add-button" onClick={addHandler}>
+          추가
+        </button>
+      </div>
     </div>
   );
 }

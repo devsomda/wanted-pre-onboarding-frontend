@@ -68,7 +68,7 @@ export default function TodoItem(props) {
   };
 
   return (
-    <div>
+    <div className="todo-item-component-container">
       {!isUpdating ? (
         <>
           <label>
@@ -79,33 +79,45 @@ export default function TodoItem(props) {
             />
             <span>{data.todo}</span>
           </label>
-          <button data-testid="modify-button" onClick={setUpdateStatus}>
-            수정
-          </button>
-          <button
-            data-testid="delete-button"
-            onClick={() => deleteHandler(data.id)}
-          >
-            삭제
-          </button>
+          <div>
+            <button data-testid="modify-button" onClick={setUpdateStatus}>
+              수정
+            </button>
+            <button
+              className="delete-button"
+              data-testid="delete-button"
+              onClick={() => deleteHandler(data.id)}
+            >
+              삭제
+            </button>
+          </div>
         </>
       ) : (
         // 수정
         <>
-          <input
-            data-testid="modify-input"
-            value={updatedTodo}
-            onChange={updateInputHandler}
-          />
-          <button
-            data-testid="submit-button"
-            onClick={() => updateTodoHandler(data)}
-          >
-            제출
-          </button>
-          <button data-testid="cancel-button" onClick={updateCancleHandler}>
-            취소
-          </button>
+          <label>
+            <input
+              type="checkbox"
+              checked={data.isCompleted}
+              onChange={(e) => updateComplete(e, data)}
+            />
+            <input
+              data-testid="modify-input"
+              value={updatedTodo}
+              onChange={updateInputHandler}
+            />
+          </label>
+          <div>
+            <button
+              data-testid="submit-button"
+              onClick={() => updateTodoHandler(data)}
+            >
+              제출
+            </button>
+            <button data-testid="cancel-button" onClick={updateCancleHandler}>
+              취소
+            </button>
+          </div>
         </>
       )}
     </div>

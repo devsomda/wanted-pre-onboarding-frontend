@@ -23,9 +23,6 @@ body {
   height: 2.5rem;
   border-radius: 10px;
 }
-.sign-up-page-container {
-  // margin: 10px;
-}
 
 /* AuthInput */
 .auth-input-component-container {
@@ -47,5 +44,31 @@ body {
       height: 2rem;
       border-radius: 10px;
     }
+  }
+}
+
+// todo
+
+.todo-list-container {
+  margin: 20px auto;
+  .add-button-wrapper {
+    margin-top: 1rem;
+  }
+  button {
+    margin-left: 5px;
+    background-color: cadetblue;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.todo-item-component-container {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  .delete-button {
+    background-color:darkslategrey;
   }
 }
