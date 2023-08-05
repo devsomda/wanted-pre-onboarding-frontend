@@ -17,7 +17,7 @@ npm start
 3. 시연 화면
 
   Assignment1~3. 
-  회원가입 및 로그인 유효성 검사 / 회원가입 성공 시 signin / 로그인 성공 시 todo 경로 이동
+회원가입 및 로그인 유효성 검사 / 회원가입 성공 시 signin / 로그인 성공 시 todo 경로 이동
 
   ![img1](/assets/img1.gif)
 
