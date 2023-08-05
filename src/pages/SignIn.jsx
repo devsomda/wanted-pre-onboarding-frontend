@@ -28,7 +28,7 @@ export default function SignIn() {
       console.log("로그인이 완료되었습니다!", res);
       // token 저장
       localStorage.setItem("token", res.access_token);
-      navigate("/");
+      navigate("/todo");
     } catch (error) {
       console.error("로그인에 실패했습니다.", error);
     }
